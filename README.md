@@ -79,16 +79,3 @@ Abrir navegador en: http://localhost:4200
 Daniel Montoya
 daniel.fundisa@gmail.com
 GitHub: https://github.com/sociedaddidactica
-
-sql
-Copiar
-Editar
-
-—
-
-Una vez pegado en el archivo README.md, guarda y haz:
-
-```bash
-git add README.md
-git commit -m "Agregado README con descripción del proyecto"
-git push
