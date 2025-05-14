@@ -18,9 +18,10 @@ import { RequestStatus } from '@models/request-status.model';
 })
 export class LoginFormComponent {
   form = this.formBuilder.nonNullable.group({
-    email: ['', [Validators.email, Validators.required]],
-    password: ['', [ Validators.required, Validators.minLength(6)]],
+    username: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
   });
+
   faPen = faPen;
   faEye = faEye;
   faEyeSlash = faEyeSlash;
@@ -31,24 +32,26 @@ export class LoginFormComponent {
     private formBuilder: FormBuilder,
     private router: Router,
     private authService: AuthService
-  ) { }
+  ) {}
 
   doLogin() {
     if (this.form.valid) {
       this.status = 'loading';
-      const { email, password } = this.form.getRawValue();
-      this.authService.login(email, password)
-      .subscribe({
+      const { username, password } = this.form.getRawValue();
+
+      this.authService.login(username, password).subscribe({
         next: () => {
           this.status = 'success';
-          this.router.navigate(['/app/boards'])
+          this.router.navigate(['/app/boards']);
         },
-        error: () => {
+        error: (err) => {
           this.status = 'failed';
+          console.error('Error de login:', err);
         }
-      })
+      });
     } else {
       this.form.markAllAsTouched();
     }
   }
 }
+

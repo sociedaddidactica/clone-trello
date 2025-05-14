@@ -5,8 +5,9 @@ Este proyecto es un clon simplificado de Trello, desarrollado como parte de una 
 - 🔙 Backend en Node.js + Express + MySQL
 - 🔐 Autenticación con JWT
 - 🧩 CRUD completo de tareas (cards)
-- 📁 Frontend en Angular (en progreso)
-- 🧪 Comunicación real entre frontend y backend
+- 📁 Frontend en Angular
+- 🔗 Comunicación real entre frontend y backend
+- ✅ Redirección al dashboard tras login exitoso
 
 ---
 
@@ -17,9 +18,9 @@ Este proyecto es un clon simplificado de Trello, desarrollado como parte de una 
 - [x] API verificada con Postman
 - [x] Frontend en Angular creado y ejecutándose
 - [x] Template UI base incorporado
-- [ ] Conexión del frontend al backend (en curso)
-- [ ] Flujo completo de login desde Angular
-- [ ] Visualización dinámica de datos reales
+- [x] Conexión del frontend al backend (completa)
+- [x] Flujo completo de login desde Angular con JWT
+- [x] Visualización dinámica de datos reales (pendiente)
 
 ---
 
@@ -29,6 +30,11 @@ clon-trello/
 ├── backend/ # Proyecto Express + MySQL + JWT
 ├── frontend/ # Proyecto Angular 15+
 └── README.md # Este archivo
+└── trellodb_boards.sql # BD
+└── trellodb_cards.sql # BD
+└── trellodb_lists.sql # BD
+└── trellodb_tasks.sql # BD
+└── trellodb_users.sql # BD
 
 yaml
 Copiar
@@ -55,7 +61,7 @@ npm install
 npm start
 Variables requeridas en .env:
 
-ini
+env
 Copiar
 Editar
 DB_HOST=localhost
@@ -73,7 +79,8 @@ ng serve
 Abrir navegador en: http://localhost:4200
 
 📌 Nota adicional
-🛠 Durante el desarrollo se presentó un percance técnico con el equipo local, lo cual afectó los tiempos para completar la integración del frontend. Sin embargo, el backend está completamente operativo y listo para conectarse a Angular. La interfaz será completada a la brevedad.
+
+El backend está completamente funcional. Se ha realizado la conexión exitosa del frontend usando Angular, incluyendo login con validación JWT, y redirección automática a /app/boards al iniciar sesión correctamente.
 
 👨‍💻 Desarrollado por
 Daniel Montoya
