@@ -26,19 +26,18 @@ Este proyecto es un clon simplificado de Trello, desarrollado como parte de una 
 
 ## 📂 Estructura del Repositorio
 
-clon-trello/
-├── backend/ # Proyecto Express + MySQL + JWT
-├── frontend/ # Proyecto Angular 15+
-└── README.md # Este archivo
-└── trellodb_boards.sql # BD
-└── trellodb_cards.sql # BD
-└── trellodb_lists.sql # BD
-└── trellodb_tasks.sql # BD
-└── trellodb_users.sql # BD
+clone-trello/
+├── backend/ # Proyecto Express + MySQL + JWT (API REST)
+├── frontend/ # Proyecto Angular 15+ (interfaz de usuario)
+├── README.md # Documentación del proyecto
+├── trellodb_boards.sql # Script SQL: tabla de tableros
+├── trellodb_cards.sql # Script SQL: tabla de tarjetas
+├── trellodb_lists.sql # Script SQL: tabla de listas
+├── trellodb_tasks.sql # Script SQL: tabla de tareas
+└── trellodb_users.sql # Script SQL: tabla de usuarios
 
-yaml
-Copiar
-Editar
+
+
 
 ---
 
