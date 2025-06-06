@@ -56,21 +56,18 @@ clone-trello/
 ```bash
 cd backend
 npm install
+cp .env.example .env
 npm start
-Variables requeridas en .env:
-
-env
-Copiar
-Editar
+# Variables requeridas en .env
+PORT=3000
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=tu_clave
 DB_NAME=nombre_bd
 JWT_SECRET=clave_secreta
-Frontend
-bash
-Copiar
-Editar
+
+### Frontend
+```bash
 cd frontend
 npm install
 ng serve
